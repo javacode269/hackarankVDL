@@ -1,0 +1,13 @@
+Các dạng bài tính toán số học
+    CatalanNumber: tính số Catalan thứ n
+    Combination: Tính tổ hợp . in ra list
+    Permutation: Tính hoán vị, in ra list
+    PermutationWithRepetition: Tính chỉnh hợp, in ra list
+    EValue: Tính số e với số lượng phần thập phân cho trước
+    PiValue: Tính số Pi với số lượng phần thập phân cho trước
+    Factorial: Giai thừa
+    Fibonaci
+    GCD_LCD: UCLN và BCNN
+    PerfectNumber: Tính số n có phải số hoàn hảo không
+    PrimeNumber: Số nguyên tố
+    ArmstrongNumber: tìm các số Armstrong
