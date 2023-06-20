@@ -1,0 +1,3 @@
+Scanner:
+	nextLine(): Di chuyển con trỏ về đầu dòng kế tiếp
+	nextInt(): Di chuyển con trỏ về cuối ký tự đầu tiên sau token
