@@ -85,5 +85,66 @@ public class ArrayListPractice {
         dsTenHocSinh.ensureCapacity(2);
         System.out.println("Size of array after ensureCapacity : " + dsTenHocSinh.size());
 
+
+        ArrayList<Integer> stt = new ArrayList<>();
+        stt.add(1);stt.add(2);stt.add(4);
+        stt.add(5);stt.add(3);stt.add(4);
+        //Write a Java program to reverse elements in a array list
+        System.out.println("Danh sach STT TRUOC khi duoc reverse sap xep la: ");
+        for (Integer s: stt){
+            System.out.print(s + "; ");
+        }
+        System.out.println("");
+        Collections.sort(stt, Collections.reverseOrder());
+        System.out.println("Danh sach STT SAU khi duoc reverse sap xep la: ");
+        for (Integer s: stt){
+            System.out.print(s + "; ");
+        }
+
+        System.out.println("-------------------");
+        System.out.println("-------------------");
+        System.out.println("-------------------");
+        System.out.println("-------------------");
+
+        //Driver-code for function compareTwoArrayList
+        ArrayList<String> arr1 = new ArrayList<>();
+        arr1.add("Hello");
+        arr1.add("Worlds");
+        arr1.add("!!");
+
+        ArrayList<String> arr2 = new ArrayList<>();
+        arr2.add("!!");
+        arr2.add("Hello");
+        arr2.add("Worlds");
+        if (compareTwoArrayList(arr1,arr2)){
+            System.out.println("2 array bang nhau!!");
+        } else {
+            System.out.println("2 array khong bang nhau!!");
+        }
     }
+
+    //Write a Java program to compare two array lists
+    //2 ArrayList equal if every element in arr1 what represent in arr2
+    //and vice-verse
+    public  static <T> boolean compareTwoArrayList (ArrayList<T> arr1, ArrayList<T> arr2){
+        for (T el1: arr1){
+            if(arr2.contains(el1)){
+                continue;
+            } else {
+                return false;
+            }
+        }
+
+        for (T el: arr2){
+            if(arr1.contains(el)){
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //Write a Java program to swap two elements in an array list
+
 }
