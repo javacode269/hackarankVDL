@@ -1,0 +1,18 @@
+ref link: https://sourcemaking.com/design_patterns/command
+
+Command objects can be thought of as "tokens" that are created by one client
+that knows what need to be done, and passed to another client that has the resources
+for doing it.
+
+ref:
+https://gpcoder.com/4686-huong-dan-java-design-pattern-command/
+
+
+#Ví dụ Command Pattern trong ứng dụng mở tài khoản ngân hàng
+Một hệ thống ngân hàng cung cấp ứng dụng cho khách hàng (client)
+có thể mở (open) hoặc đóng (close) tài khoản trực tuyến.
+Hệ thống này được thiết kế theo dạng module, mỗi module
+sẽ thực hiện một nhiệm vụ riêng của nó, chẳng hạn mở tài khoản (OpenAccount),
+đóng tài khoản (CloseAccount). Do hệ thống không biết mỗi module sẽ làm gì,
+nên khi có yêu cầu client (chẳng hạn clickOpenAccount, clickCloseAccount),
+nó sẽ đóng gói yêu cầu này và gọi module xử lý.

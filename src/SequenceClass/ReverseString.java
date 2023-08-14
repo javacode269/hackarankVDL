@@ -21,7 +21,7 @@ public class ReverseString {
     }
 
     public static void main(String[] args) {
-        String s = "Hello, World!";
+        String s = "Image, World!";
 
         String reversedString = reverseString(s);
 

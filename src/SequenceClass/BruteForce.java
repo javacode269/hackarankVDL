@@ -21,7 +21,7 @@ public class BruteForce {
     }
 
     public static void main(String[] args) {
-        String text = "Hello, World!";
+        String text = "Image, World!";
         String pattern = "World";
 
         int index = bruteForceSearch(text, pattern);

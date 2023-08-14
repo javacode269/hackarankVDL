@@ -1,10 +1,15 @@
 package STL;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
+
+//uu nhuoc diem cua arraylist
+//Uu:
+    //Toc do truy cap nhanh
+    //Các phần tử liên tục
+
+//Nhuoc:
+    //Các thao tác add and del rất tốn chi phí
 public class ArrayListPractice {
 
 
@@ -67,7 +72,7 @@ public class ArrayListPractice {
         }
 
 
-        //Write a Java program to shuffle elements in a array list
+            //Write a Java program to shuffle elements in a array list
         Collections.shuffle(dsTenHocSinh);
         System.out.println("Danh sach ten hoc Sinh sau khi duoc shuffle sap xep la: ");
         for (String ten: dsTenHocSinh){
@@ -108,18 +113,47 @@ public class ArrayListPractice {
 
         //Driver-code for function compareTwoArrayList
         ArrayList<String> arr1 = new ArrayList<>();
-        arr1.add("Hello");
+        arr1.add("Image");
         arr1.add("Worlds");
         arr1.add("!!");
 
         ArrayList<String> arr2 = new ArrayList<>();
         arr2.add("!!");
-        arr2.add("Hello");
+        arr2.add("Image");
         arr2.add("Worlds");
         if (compareTwoArrayList(arr1,arr2)){
             System.out.println("2 array bang nhau!!");
         } else {
             System.out.println("2 array khong bang nhau!!");
+        }
+
+
+
+        //Driver code for function exactArrayList
+        ArrayList colors = new ArrayList();
+        colors.add("Green");
+        colors.add("Red");
+        colors.add("Violet");
+        colors.add("Yellow");
+        colors.add("Brown");
+        ArrayList subColors =exactArrayList(colors, 2,4);
+        for (Object color: subColors){
+            System.out.println(color);
+        }
+
+
+        //Driver code for function cloneArrayList
+
+        System.out.println("-------------------");
+        ArrayList colorset = new ArrayList();
+        colorset.add("Green");
+        colorset.add("Red");
+        colorset.add("Violet");
+        colorset.add("Yellow");
+        colorset.add("Brown");
+        ArrayList copy =cloneArrayList(colorset);
+        for (Object color: copy){
+            System.out.println(color);
         }
     }
 
@@ -145,6 +179,20 @@ public class ArrayListPractice {
         return true;
     }
 
-    //Write a Java program to swap two elements in an array list
+    //Write a Java function clone ArrayList
+    public  static  <T> ArrayList<T> cloneArrayList (ArrayList<T> source){
+        ArrayList<T> newArr= (ArrayList<T>) source.clone();
+        return newArr;
+    }
 
+    //Write a Java program to extract a portion of a array list
+    public static <T> ArrayList<T> exactArrayList (ArrayList<T> arr, int from, int to){
+        ArrayList<T> out = new ArrayList<T>();
+        //Check dieu kien from to
+        for (int i = from; i <=to; i++)
+        {
+            out.add(arr.get(i));
+        }
+        return out;
+    }
 }
