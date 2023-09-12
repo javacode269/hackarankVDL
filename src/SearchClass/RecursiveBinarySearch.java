@@ -1,12 +1,15 @@
 package SearchClass;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class RecursiveBinarySearch {
     public static int recursiveBinarySearch(int[] arr, int target) {
         return binarySearch(arr, target, 0, arr.length - 1);
     }
 
     private static int binarySearch(int[] arr, int target, int left, int right) {
-        if (left <= right) {
+            if (left <= right) {
             int mid = left + (right - left) / 2;
             if (arr[mid] == target) {
                 return mid; // Trả về chỉ số của phần tử được tìm thấy
@@ -18,5 +21,46 @@ public class RecursiveBinarySearch {
             }
         }
         return -1; // Trả về -1 nếu không tìm thấy
+    }
+
+    private static int binarySearchTiennv65(int[] arr, int target, int left, int right) {
+        int mid = (right + left )/2;
+        if ( arr[mid] == target)
+        {
+            return  mid;
+        }
+        if (target > arr[mid] ){
+            return binarySearchTiennv65(arr, target, mid+1, right);
+        }
+        if (target < arr[mid] ){
+            return binarySearchTiennv65(arr, target, left, mid);
+        }
+
+        return -1;
+    }
+    public static int recursiveBinarySearchTiennv65(int[] arr, int target) {
+        return binarySearchTiennv65(arr, target, 0, arr.length - 1);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap vao mang: ");
+
+        String line = scanner.nextLine();
+        int[] items  = Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray();
+
+        int vt = binarySearchTiennv65(items, 7, 3, 14);
+        if (vt==-1){
+            System.out.println("Khong tim thay");
+        } else {
+            System.out.println("Phan tu duoc tim thay o vi tri thu : " + vt);
+        }
+
+
+        int vitri = recursiveBinarySearch(items, 10);
+        if (vitri==-1){
+            System.out.println("Khong tim thay");
+        } else {
+            System.out.println("Phan tu duoc tim thay o vi tri thu : " + vitri);
+        }
     }
 }

@@ -1,5 +1,8 @@
 package SearchClass;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class TailRecursiveBinarySearch {
     public static int tailRecursiveBinarySearch(int[] arr, int target) {
         return binarySearch(arr, target, 0, arr.length - 1);
@@ -18,5 +21,14 @@ public class TailRecursiveBinarySearch {
         } else {
             return binarySearch(arr, target, left, mid - 1);
         }
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap vao mang: ");
+
+        String line = scanner.nextLine();
+        int[] items  = Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray();
     }
 }

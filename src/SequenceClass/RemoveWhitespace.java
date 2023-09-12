@@ -6,7 +6,7 @@ public class RemoveWhitespace {
     }
 
     public static void main(String[] args) {
-        String s = "  Hello,   World!  ";
+        String s = "  Image,   World!  ";
 
         String stringWithoutWhitespace = removeWhitespace(s);
 

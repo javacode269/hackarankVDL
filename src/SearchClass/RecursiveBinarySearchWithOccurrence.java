@@ -1,5 +1,8 @@
 package SearchClass;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class RecursiveBinarySearchWithOccurrence {
     public static int firstOccurrence(int[] arr, int target) {
         return binarySearch(arr, target, 0, arr.length - 1, true);
@@ -32,5 +35,17 @@ public class RecursiveBinarySearchWithOccurrence {
             }
         }
         return -1; // Trả về -1 nếu không tìm thấy
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap vao mang: ");
+
+        String line = scanner.nextLine();
+        int[] items  = Arrays.stream(line.split(" ")).mapToInt(Integer::parseInt).toArray();
+
+        System.out.println("phan tu 10 xuat hien dau tien tai vi tri: " + firstOccurrence(items, 10));
+        System.out.println("phan tu 10 xuat hien cuoi cung tai vi tri: " + lastOccurrence(items, 10));
+
     }
 }
