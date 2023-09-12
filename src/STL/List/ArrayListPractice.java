@@ -1,4 +1,4 @@
-package STL;
+package STL.List;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -85,5 +85,29 @@ public class ArrayListPractice {
         dsTenHocSinh.ensureCapacity(2);
         System.out.println("Size of array after ensureCapacity : " + dsTenHocSinh.size());
 
+
+
+        //Write a Java program to swap two elements in an array list
+        ArrayList<String> tvGiaDinh = new ArrayList<String>(5);
+        tvGiaDinh.clear();
+        tvGiaDinh.add("Ich");
+        tvGiaDinh.add("Lan");
+        tvGiaDinh.add("Phuong");
+        tvGiaDinh.add("Linh");
+        tvGiaDinh.add("Khoa");
+        Collections.swap(tvGiaDinh, 2, 3);
+
+        System.out.println("Phan tu thu 2 la : " + tvGiaDinh.get(2));
+        System.out.println("Phan tu thu 3 la : "+ tvGiaDinh.get(3));
+        System.out.println("Before swap: ");
+        for (String tv: tvGiaDinh) {
+            System.out.print(tv + "; ");
+        }
+        Collections.swap(tvGiaDinh,2,3);
+
+        System.out.println("After swap: ");
+        for (String tv: tvGiaDinh) {
+            System.out.print(tv + "; ");
+        }
     }
 }
