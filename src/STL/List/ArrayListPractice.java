@@ -1,4 +1,4 @@
-package STL;
+package STL.List;
 
 import java.util.*;
 
@@ -193,6 +193,6 @@ public class ArrayListPractice {
         {
             out.add(arr.get(i));
         }
-        return out;
+        return out; 
     }
 }

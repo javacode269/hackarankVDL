@@ -1,4 +1,4 @@
-package STL;
+package STL.List;
 
 import java.util.ArrayList;
 
